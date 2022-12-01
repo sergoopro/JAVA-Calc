@@ -8,7 +8,9 @@ public class Calc {
         Converter converter = new Converter();
         String[] actions = {"+", "-", "/", "*"};
         String[] regexActions = {"\\+", "-", "/", "\\*"};
+
         Scanner scn = new Scanner(System.in);
+        while (true){
         System.out.print("Введие выражение: ");
         String exp = scn.nextLine();
         int actionIndex = -1;
@@ -72,6 +74,7 @@ public class Calc {
 
         }
     }
+}
 }
 
 
