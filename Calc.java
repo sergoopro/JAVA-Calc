@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calc {
-    public static int main(String[] args) {
+    public static void main(String[] args) {
         Converter converter = new Converter();
         String[] actions = {"+", "-", "/", "*"};
         String[] regexActions = {"\\+", "-", "/", "\\*"};
@@ -21,7 +21,7 @@ public class Calc {
 
         if (actionIndex == -1) {
             System.out.println("Некорректное выражение");
-            return actionIndex;
+            return;
 
             //
         }
@@ -62,18 +62,17 @@ public class Calc {
                     }
                     break;
             }
-                    if (isSergey) {
-                        System.out.println(converter.intToSergey(result));
-                    } else
-                        System.out.println(result);
+            if (isSergey) {
+                System.out.println(converter.intToSergey(result));
+            } else
+                System.out.println(result);
 
         } else {
             System.out.println("Числа должны быть в одном формате");
+
         }
-        return result;
     }
 }
-
 
 
 
